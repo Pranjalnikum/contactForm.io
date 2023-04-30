@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <!-- Contact Section Start -->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <div class="bx bx-moon" id="darkmode"></div>
+            <h2>Connect With Us</h2>
+        </div>
+        <div class="contact-form">
+            <form action="">
+                <input type="text" placeholder="Your Name" tabindex="1">
+                <input type="email" name="" id="" placeholder="Your Email" tabindex="2">
+                <input type="number" name="" id="" maxlength="10" placeholder="Your Phone Number" tabindex="3">
+
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..." tabindex="4"></textarea>
+                <input type="button" value="Send" class="contact-button" id="btn">
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+
+    <!-- Javascript -->
+    <script>
+        // Dark Mode / light mode
+        let darkmode = document.querySelector("#darkmode");
+        let input = document.querySelector("contact-form")
+
+        darkmode.onclick = () => {
+            if (darkmode.classList.contains("bx-moon")) {
+                darkmode.classList.replace("bx-moon", "bx-sun");
+                document.body.classList.add("active");
+            } else {
+                darkmode.classList.replace("bx-sun", "bx-moon");
+                document.body.classList.remove("active");
+            }
+        };
+    </script>
+</body>
+
+</html>
